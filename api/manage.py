@@ -18,18 +18,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-sys.path.append(os.path.dirname(__file__))
-
-# Set the Django settings module for Vercel
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
-
-# This ensures your application is properly configured when it runs
-from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
-
-# Vercel expects a handler or app variable
-handler = application
-
-
 if __name__ == '__main__':
     main()
